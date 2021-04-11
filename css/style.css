@@ -158,7 +158,10 @@ footer{
 #f5{
   grid-row: 5/5;
 } 
-#f1,#f2,#f3,#f4,#f5{
+#f6{
+  grid-row: 6/6;
+} 
+#f1,#f2,#f3,#f4,#f5,#f6{
   grid-column: 1/1;
   object-fit: cover;
   align-items: center;
@@ -185,9 +188,86 @@ footer{
 }
 
 
+form {
+  border: 3px solid #f1f1f1;
+}
 
+legend{ 
+  font-size: 125%;
+  font-style:italic;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+label{
+  display: inline-block;
+  margin-right:10px;
+  width:15%;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
+input[type=checkbox]{
+}
+
+input[type=submit] {
+  background-color: #38803C;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.Sapiens, .B1984, .SilentMajority{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  border-style:solid;
+  border:floralwhite 2px;
+  
+}
+.Sapiens>img, .B1984>img, .SilentMajority>img{
+  grid-column: 1/1;
+  
+  margin: 10px;
+  width: 160px;
+  height: 250px;
+}
+#content1, #content2, #content3{
+  grid-column: 2/2;
+}
+
+/* #finmain> img{
+  /* this is not working--- need to be fixed */
+  /* width: 160px;
+  height: 250px;
+} */ 
+
+#read_main{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+
+  
+  /* justify-self: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center; */
+}
+#read_main img{
+  align-self: center;
+  justify-self: center;
+}
 /* mobile view */
 /* @media (max-width: 500px) {
 
@@ -196,7 +276,9 @@ footer{
    }
   
 } */
-
+#main div{
+  margin:20px;
+}
 /* laptop view */
 @media screen and (min-width: 600px) {
   
@@ -242,8 +324,13 @@ footer{
     grid-row: 1/1;
     object-fit: cover;
   }
-  #f4,#f5{
+  #f4,#f5,#f6{
     grid-row: 2/2;
+  }
+
+  #read_main{
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
 }
