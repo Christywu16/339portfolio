@@ -103,42 +103,13 @@ footer{
   grid-template-rows: auto;
   width: 100%;
 }
-/* 
-.finished_imgs>img{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
- .finished_imgs > img{
-  align-content: center;
-  width:95%;
-}
-.finished_container:hover .finished_imgs {
-  transform: rotateY(180deg);
-}
-.flip-card-front1, .flip-card-back1, flip-card-front2, flip-card-back2, flip-card-front3, flip-card-back3, flip-card-front4, flip-card-back4, flip-card-front5, flip-card-back5 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari 
-  backface-visibility: hidden;
-} 
-
-.flip-card-front1, flip-card-front2, flip-card-front3, flip-card-front4, flip-card-front5 {
-  background-color: #bbb;
-  color: black;
-}
 
 
-.flip-card-back1, flip-card-back2,flip-card-back3, flip-card-back4, flip-card-back2 {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}  */
+
+
+
+
+
 
 
  
@@ -226,10 +197,11 @@ input[type=submit]:hover {
 /* finished_html page */
 .Sapiens, .B1984, .SilentMajority{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
   border-style:solid;
   border:floralwhite 2px;
+  text-align: center;
 }
 .Sapiens>img, .B1984>img, .SilentMajority>img{
   grid-column: 1/1;
@@ -254,6 +226,10 @@ input[type=submit]:hover {
   justify-self: center;
 }
 
+.finished_imgs a, .toRead_imgs a{
+  color: white;
+  text-decoration: underline;
+}
 
 #main div{
   /* margin-top:20px; */
@@ -279,6 +255,13 @@ textarea {
 }
 
 
+.Moon, .Guns, .Malice{
+  text-align: center;
+}
+#read_main p{
+  display:none;
+}
+
 /* tablet view */
 /* @media (max-width: 500px) {
 
@@ -291,6 +274,10 @@ textarea {
 
 /* laptop view */
 @media screen and (min-width: 600px) {
+
+  #read_main p{
+    display:contents;
+  }
   
   /* change the navigation bar display as horizontally */
   nav li {
@@ -329,13 +316,10 @@ textarea {
   }
 
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card1:hover .flip-card-inner1, .flip-card1:active .flip-card-inner1, .flip-card1:focus .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9 {
-    /* transform: rotateY(180deg); */
-    transform: rotateY(180deg) translateZ(1px); 
-    backface-visibility: hidden; 
-  }
 
-  .flip-card1.focus-within .flip-card-inner1{
+
+  .flip-card1:hover .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9
+  ,.flip-card1:focus-within .flip-card-inner1,.flip-card2:focus-within .flip-card-inner2,.flip-card3:focus-within .flip-card-inner3,.flip-card4:focus-within .flip-card-inner4,.flip-card5:focus-within .flip-card-inner5,.flip-card6:focus-within .flip-card-inner6,.flip-card7:focus-within .flip-card-inner7,.flip-card8:focus-within .flip-card-inner8,.flip-card9:focus-within .flip-card-inner9{
     transform: rotateY(180deg);
   }
 
@@ -369,9 +353,15 @@ textarea {
     margin-top: 60px;
   }
 
-  
+
+
 
   /* display by grid */
+  .Sapiens, .B1984, .SilentMajority{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
   .finished_imgs, .toRead_imgs{
     display: grid; 
     
@@ -397,6 +387,8 @@ textarea {
     align-items: center;
   }
 
+
+
 }
 
 
@@ -412,11 +404,18 @@ textarea {
     background-attachment: initial;  /*Turn off parallax*/
   }
 
-  .flip-card1, .flip-card-inner1 ,.flip-card-back1{
+  /* turn off the skip bar motion */
+  .skip a{
     transition: transform none;
   }
-  .skip a{
-    transition: none;
+
+  /* turn off the flip cards */
+  .flip-card-inner1,.flip-card-inner2,.flip-card-inner3,.flip-card-inner4,.flip-card-inner5,.flip-card-inner6,.flip-card-inner7,.flip-card-inner8,.flip-card-inner9{
+    transition: transform none; 
+  }
+
+  .flip-card1:hover .flip-card-inner1, .flip-card1:active .flip-card-inner1, .flip-card1:focus .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9 {
+    transform: none;
   }
 }
 
