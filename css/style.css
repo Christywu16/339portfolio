@@ -2,8 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 
-
-
+/* skip to the content banner */
 .skip a{
   background: white;
   left: 0;
@@ -21,12 +20,12 @@ html{
 }
 
 
+/* navigation bar */
 nav{
   background-color: #9400D3;
   padding: 25px 0; 
   text-align: center;
 }
-
 
 nav a{
   color:#E6E6FA;
@@ -38,6 +37,7 @@ nav li {
   display: block;
   font-weight: bold;
 }
+
 nav a:hover{
   text-decoration: underline;
   background-color:blue;
@@ -48,6 +48,7 @@ nav a:hover{
   background-color:rgb(73, 16, 138);
   color:rgb(255, 255, 255);
 }
+
 .current:before{
   content:'📚';
 }
@@ -59,7 +60,6 @@ nav a:hover{
   grid-template-rows: auto;
   width: 100%; */
 }
-
 
 
 header {
@@ -103,8 +103,8 @@ footer{
   grid-template-rows: auto;
   width: 100%;
 }
-
-/* .finished_imgs{
+/* 
+.finished_imgs>img{
   position: relative;
   width: 100%;
   height: 100%;
@@ -112,7 +112,8 @@ footer{
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-.finished_imgs > img{
+
+ .finished_imgs > img{
   align-content: center;
   width:95%;
 }
@@ -123,24 +124,22 @@ footer{
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari
+  -webkit-backface-visibility: hidden; /* Safari 
   backface-visibility: hidden;
-}
-/* Style the front side (fallback if image is missing) */
-/*
+} 
+
 .flip-card-front1, flip-card-front2, flip-card-front3, flip-card-front4, flip-card-front5 {
   background-color: #bbb;
   color: black;
 }
 
-/* Style the back side */
-/*
+
 .flip-card-back1, flip-card-back2,flip-card-back3, flip-card-back4, flip-card-back2 {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
-} 
-*/
+}  */
+
 
  
 #f1,#t1,#t2,#t3{
@@ -174,11 +173,7 @@ footer{
   width: 160px;
   height: 250px;
 }
-/* .finished_imgs > img{
-  align-items: center;
-  width: 160px;
-  height: 250px;
-} */
+
 
 .text{
   background-color: rgba(255, 255, 255, .8);
@@ -187,7 +182,7 @@ footer{
   align-self: center;
 }
 
-
+/* form part on the contact page */
 form {
   border: 3px solid #f1f1f1;
 }
@@ -227,17 +222,17 @@ input[type=submit]:hover {
   opacity: 0.8;
 }
 
+
+/* finished_html page */
 .Sapiens, .B1984, .SilentMajority{
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   border-style:solid;
   border:floralwhite 2px;
-  
 }
 .Sapiens>img, .B1984>img, .SilentMajority>img{
   grid-column: 1/1;
-  
   margin: 10px;
   width: 160px;
   height: 250px;
@@ -246,28 +241,19 @@ input[type=submit]:hover {
   grid-column: 2/2;
 }
 
-/* #finmain> img{
-  /* this is not working--- need to be fixed */
-  /* width: 160px;
-  height: 250px;
-} */ 
-
 #read_main{
   display:flex;
   flex-wrap: wrap;
   justify-content:center;
   align-items: center;
-
-  
-  /* justify-self: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center; */
 }
+
+
 #read_main img{
   align-self: center;
   justify-self: center;
 }
+
 /* mobile view */
 /* @media (max-width: 500px) {
 
@@ -277,11 +263,19 @@ input[type=submit]:hover {
   
 } */
 #main div{
-  margin:20px;
+  /* margin-top:20px; */
 }
+
+.to3{
+  margin-bottom: 20px;
+}
+
+
+
 /* laptop view */
 @media screen and (min-width: 600px) {
   
+  /* change the navigation bar display as horizontally */
   nav li {
     border-bottom: none;
     /* display: inline-block;   This need to be fix!!!! Look hw5 for nav */
@@ -294,6 +288,73 @@ input[type=submit]:hover {
     align-items: center; */
   }
 
+
+  /* flip card !!! let's do this */
+
+  /* The flip card container */
+  .flip-card1,.flip-card2,.flip-card3,.flip-card4,.flip-card5,.flip-card6,.flip-card7,.flip-card8,.flip-card9{
+    background-color: transparent;
+    width: 160px;
+    height: 250px;
+    justify-self: center;
+    perspective: 1000px; 
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner1,.flip-card-inner2,.flip-card-inner3,.flip-card-inner4,.flip-card-inner5,.flip-card-inner6,.flip-card-inner7,.flip-card-inner8,.flip-card-inner9{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* justify-content: center; */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card1:hover .flip-card-inner1, .flip-card1:active .flip-card-inner1, .flip-card1:focus .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9 {
+    /* transform: rotateY(180deg); */
+    transform: rotateY(180deg) translateZ(1px); 
+    backface-visibility: hidden; 
+  }
+
+  .flip-card1.focus-within .flip-card-inner1{
+    transform: rotateY(180deg);
+  }
+
+  /* Position the front and back side */
+  .flip-card-front1, .flip-card-back1 , .flip-card-front2, .flip-card-back2,.flip-card-front3, .flip-card-back3,.flip-card-front4, .flip-card-back4,.flip-card-front5, .flip-card-back5,.flip-card-front6, .flip-card-back6,.flip-card-front7, .flip-card-back7,.flip-card-front8, .flip-card-back8,.flip-card-front9, .flip-card-back9{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+  }
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front1, .flip-card-front2,.flip-card-front3,.flip-card-front4,.flip-card-front5,.flip-card-front6,.flip-card-front7,.flip-card-front8,.flip-card-front9{
+    background-color: #bbb;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back1, .flip-card-back2 ,.flip-card-back3,.flip-card-back4,.flip-card-back5,.flip-card-back6,.flip-card-back7,.flip-card-back8,.flip-card-back9{
+    background-color:mediumpurple;
+    color: white;
+    /* transform: rotateY(180deg); */
+    transform: rotateY(180deg) translateZ(1px); 
+    backface-visibility: hidden; 
+  }
+
+  .finished_container h2, .toRead_container h2{
+    margin-top: 60px;
+  }
+
+  
+
+  /* display by grid */
   .finished_imgs, .toRead_imgs{
     display: grid; 
     
@@ -305,21 +366,7 @@ input[type=submit]:hover {
   .toRead_imgs{
     grid-template-rows: 1fr;
   }
-  /* #f1{
-    grid-row: 1/1;
-  }
-  #f2{
-    grid-row: 2/2;
-  }
-  #f3{
-    grid-row: 3/3;
-  }
-  #f4{
-    grid-row: 4/4;
-  } 
-  #f5{
-    grid-row: 5/5;
-  }  */
+  
   #f1,#f2,#f3{
     grid-row: 1/1;
     object-fit: cover;
@@ -348,4 +395,15 @@ input[type=submit]:hover {
   header{  
     background-attachment: initial;  /*Turn off parallax*/
   }
+
+  .flip-card1, .flip-card-inner1 ,.flip-card-back1{
+    transition: transform none;
+  }
+  .skip a{
+    transition: none;
+  }
 }
+
+
+
+
