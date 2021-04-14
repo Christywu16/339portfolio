@@ -1,6 +1,24 @@
 html{
     scroll-behavior: smooth;
 }
+#finished_description,#toRead_description{
+  text-decoration-color: mediumpurple;
+  
+
+}
+#main{
+  background-image: url('../images/finish_background.jpg');
+  background-repeat: no-repeat;
+  /* Set up proportionate scaling */
+	width:100%;
+  height:100%;
+  background-size:150% 200%;
+
+  /* Set a specific height */
+  /* min-height: 100px;  */
+}
+
+
 
 /* skip to the content banner */
 .skip a{
@@ -73,6 +91,14 @@ header {
   background-image: url(https://www.teahub.io/photos/full/353-3535480_harry-potter-john-rylands-library.jpg);
   background-repeat: no-repeat;
   background-size: auto;
+  /* Set a specific height */
+  min-height: 100px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header h1, header p{
   background-color: black;
@@ -410,15 +436,18 @@ textarea {
   }
 
   /* turn off the flip cards */
-  .flip-card-inner1,.flip-card-inner2,.flip-card-inner3,.flip-card-inner4,.flip-card-inner5,.flip-card-inner6,.flip-card-inner7,.flip-card-inner8,.flip-card-inner9{
+  .flip-card-inner1,.flip-card-inner2,.flip-card-inner3,.flip-card-inner4,.flip-card-inner5,.flip-card-inner6,.flip-card-inner7,.flip-card-inner8,.flip-card-inner9, .flip-card1:focus-within .flip-card-inner1{
     transition: transform none; 
   }
 
-  .flip-card1:hover .flip-card-inner1, .flip-card1:active .flip-card-inner1, .flip-card1:focus .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9 {
+  .flip-card1:hover .flip-card-inner1, .flip-card1:active .flip-card-inner1, .flip-card1:focus .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9,
+  .flip-card1:focus-within .flip-card-inner1,.flip-card2:focus-within .flip-card-inner2,.flip-card3:focus-within .flip-card-inner3,.flip-card4:focus-within .flip-card-inner4,.flip-card5:focus-within .flip-card-inner5,.flip-card6:focus-within .flip-card-inner6,.flip-card7:focus-within .flip-card-inner7,.flip-card8:focus-within .flip-card-inner8,.flip-card9:focus-within .flip-card-inner9{
     transform: none;
   }
+/* 
+  .flip-card:active(:focus-within){
+
+  } */
 }
-
-
 
 
