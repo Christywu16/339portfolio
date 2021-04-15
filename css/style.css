@@ -6,7 +6,7 @@ html{
   
 
 }
-#main{
+#main, #con_main{
   background-image: url('../images/finish_background.jpg');
   background-repeat: no-repeat;
   /* Set up proportionate scaling */
@@ -17,8 +17,14 @@ html{
   /* Set a specific height */
   /* min-height: 100px;  */
 }
-
-
+#con_main h1{
+  color:white;
+  text-align: center;
+  /* text-transform:uppercase; */
+}
+#con_form{
+  align-self: center;
+}
 
 /* skip to the content banner */
 .skip a{
@@ -61,6 +67,11 @@ nav a:hover{
   background-color:blue;
 }
 
+nav{
+  display:flex;
+  justify-content: center;
+}
+
 .current{
   text-transform: uppercase;
   background-color:rgb(73, 16, 138);
@@ -87,12 +98,15 @@ header {
   /* color:hsl(266, 45%, 89%); */
   display: inline-block;
   padding: 25px;
-  width: 100%;
-  background-image: url(https://www.teahub.io/photos/full/353-3535480_harry-potter-john-rylands-library.jpg);
+  
+  background-image: url(https://www.teahub.io/photos/full/353-3535480_harry-potter-john-rylands-library.jpg) ;
   background-repeat: no-repeat;
-  background-size: auto;
+  /* background-size: auto; */
   /* Set a specific height */
   min-height: 100px; 
+  width:100vw;
+  /* overflow: hidden; */
+  /* background */
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -133,9 +147,23 @@ footer{
 
 
 
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-
-
+.animation-effect {
+  animation: bounceIn 3s;
+}
 
 
  
@@ -181,12 +209,25 @@ footer{
 
 /* form part on the contact page */
 form {
+  width:80%;
   border: 3px solid #f1f1f1;
+  align-items: center;
+  align-self: center;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZmQ5zrbAy7DTn0-08AWbgcc99lBvmvkZug&usqp=CAU');
+  background-repeat: repeat;
+  background-size: auto;
+
+  /* Set a specific height */
+  min-height: 100px; 
+  /* font-family: inherit; */
+  /* text-decoration-thickness: overline; */
+  font-weight: bold;
+
 }
 
 legend{ 
-  font-size: 125%;
-  font-style:italic;
+  /* font-size: 125%; */
+  /* font-style:italic; */
   text-transform: uppercase;
   text-align: center;
 }
@@ -197,7 +238,7 @@ label{
   width:15%;
 }
 input {
-  width: 100%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -317,7 +358,12 @@ textarea {
     /* text-align: right;
     align-items: center; */
   }
-
+  nav{
+    display:flex;
+    /* align-items: flex-end; */
+    justify-content:flex-end;
+  }
+   
 
   /* flip card !!! let's do this */
 
@@ -423,7 +469,7 @@ textarea {
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: auto; /* Removes scroll animation */
+    scroll-behavior: auto; /* Removes scroll animation */
   }
   
   header{  
@@ -443,6 +489,10 @@ textarea {
   .flip-card1:hover .flip-card-inner1, .flip-card1:active .flip-card-inner1, .flip-card1:focus .flip-card-inner1,.flip-card2:hover .flip-card-inner2 ,.flip-card3:hover .flip-card-inner3,.flip-card4:hover .flip-card-inner4,.flip-card5:hover .flip-card-inner5,.flip-card6:hover .flip-card-inner6,.flip-card7:hover .flip-card-inner7,.flip-card8:hover .flip-card-inner8,.flip-card9:hover .flip-card-inner9,
   .flip-card1:focus-within .flip-card-inner1,.flip-card2:focus-within .flip-card-inner2,.flip-card3:focus-within .flip-card-inner3,.flip-card4:focus-within .flip-card-inner4,.flip-card5:focus-within .flip-card-inner5,.flip-card6:focus-within .flip-card-inner6,.flip-card7:focus-within .flip-card-inner7,.flip-card8:focus-within .flip-card-inner8,.flip-card9:focus-within .flip-card-inner9{
     transform: none;
+  }
+
+  .animation-effect {
+    animation: none;
   }
 /* 
   .flip-card:active(:focus-within){

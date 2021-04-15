@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9SRXBKPRR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-H9SRXBKPRR');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
@@ -25,38 +34,39 @@
     </header>
     <main id='con_main'>
         <h1>
-          <br>This is contact page
-        </h1>
-        <p>
-          <br>If you have any question, please email at: wumengqi@umich.edu
-          <p><hr></p>
-        </p>
-    </main>
+          <!-- <br>This Is Contact Page -->
+        
+        <!-- <p> -->
+          <br>If You Have Any question, Please Email At: wumengqi@umich.edu
+          <br><br>
+        <!-- </p> -->
+      </h1>
+    <div id='con_form'>
     <form action="https://formspree.io/f/moqyqgoq" method="POST">
       <fieldset>
         <legend>Keep Me Informed!</legend>
     
       <div class="container">
         <label for ='fullname'>Your Name </label>
-        <input type="text" name="fullname" id='fullname' placeholder="First and Last" required><br>
+        <input type="text" name="fullname" id='fullname' placeholder="First and Last" required>
     
         <label for ='email'>Email Address</label>
-        <input id='email' name="email" type = "email" placeholder="email@domain.tld" required><br>
+        <input id='email' name="email" type = "email" placeholder="email@domain.tld" required>
     
-        <label for ='message'>Leave A Message</label>
+        <label for ='message'>Leave A Message</label><br>
     
     
-        <textarea id='message' name='message' placeholder="Enter your message"></textarea><br>
-    
+        <br><textarea id='message' name='message' placeholder="Enter your message"></textarea><br>
+        <br><label for='remember'>Remember me</label><br> -->
         <input  id='remember' name="remember" type="checkbox" checked="checked"> 
-        <label for='remember'>Remember me</label>
-        
+        <!-- <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label> -->
     
         <input type="submit" name='submit' value="send me"></input>    
-
+      </div>
       </div>
     </fieldset>
   </form>
+</main>
     <footer>
         <p>University of Michigan School of Information <br/>
           &copy; Mengqi Wu - SI 339 Web Design 2021</p>
