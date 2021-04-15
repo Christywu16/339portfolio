@@ -115,6 +115,7 @@ header {
   width:100%;
   /* overflow: hidden; */
   /* background */
+  padding-top: 25px;;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -131,7 +132,12 @@ header h1, header p{
 
 main{
   font-family:Roboto, system-ui, sans-serif;
-  background-color: hsl(266, 45%, 89%);;
+  background-color: hsl(266, 45%, 89%);
+  
+}
+#main{
+  font-weight: bold;
+  color:white;
 }
 
 
@@ -173,7 +179,9 @@ footer{
 .animation-effect1,.animation-effect2,.animation-effect3,.animation-effect4,#legend {
   animation: bounceIn 3s;
 }
-
+/* .animation-effect1,.animation-effect2,.animation-effect3,.animation-effect4{
+  padding-top: 20px;
+} */
 
  
 #f1,#t1,#t2,#t3{
@@ -238,7 +246,10 @@ form {
   background-image: url(/images/1.jpg);
   background-size:150% 200%;
 }
-
+#finmain{
+  background-image: url(/images/6.jpg);
+  background-size:150% 200%;
+}
 legend{ 
   /* font-size: 125%; */
   /* font-style:italic; */
