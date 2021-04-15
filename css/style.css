@@ -111,7 +111,7 @@ header {
   background-repeat: no-repeat;
   /* background-size: auto; */
   /* Set a specific height */
-  min-height: 150px; 
+  min-height: 250px; 
   width:100%;
   /* overflow: hidden; */
   /* background */
@@ -378,7 +378,9 @@ textarea {
     /* align-items: flex-end; */
     justify-content:flex-end;
   }
-   
+  .new_div1, .new_div2, .new_div3, .new_div4{
+    min-height: 150px;
+  }
 
   /* flip card !!! let's do this */
 
