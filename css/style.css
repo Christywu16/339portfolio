@@ -22,9 +22,10 @@ html{
   text-align: center;
   /* text-transform:uppercase; */
 }
-#con_form{
-  align-self: center;
+form{
+  margin:auto;
 }
+
 
 /* skip to the content banner */
 .skip a{
@@ -43,7 +44,10 @@ html{
   top: 10px;
 }
 
-
+/* .read_main div{
+  padding: 10px;
+  margin:10px;
+} */
 /* navigation bar */
 nav{
   background-color: #9400D3;
@@ -95,16 +99,20 @@ header {
   color: whitesmoke;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 35px;
+  width:100%;
   /* color:hsl(266, 45%, 89%); */
   display: inline-block;
-  padding: 25px;
+  /* padding: 25px; */
   
-  background-image: url(https://www.teahub.io/photos/full/353-3535480_harry-potter-john-rylands-library.jpg) ;
+}
+
+.new_div1, .new_div2, .new_div3, .new_div4{
+  background-image: url(https://www.teahub.io/photos/full/353-3535480_harry-potter-john-rylands-library.jpg);
   background-repeat: no-repeat;
   /* background-size: auto; */
   /* Set a specific height */
-  min-height: 100px; 
-  width:100vw;
+  min-height: 150px; 
+  width:100%;
   /* overflow: hidden; */
   /* background */
 
@@ -114,6 +122,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 header h1, header p{
   background-color: black;
   font-size: 24px;
@@ -161,7 +170,7 @@ footer{
   }
 }
 
-.animation-effect {
+.animation-effect1,.animation-effect2,.animation-effect3,.animation-effect4,#legend {
   animation: bounceIn 3s;
 }
 
@@ -223,6 +232,11 @@ form {
   /* text-decoration-thickness: overline; */
   font-weight: bold;
 
+}
+
+#read_main{
+  background-image: url(/images/1.jpg);
+  background-size:150% 200%;
 }
 
 legend{ 
@@ -324,6 +338,7 @@ textarea {
 
 .Moon, .Guns, .Malice{
   text-align: center;
+  padding:15px;
 }
 #read_main p{
   display:none;
@@ -474,6 +489,8 @@ textarea {
   
   header{  
     background-attachment: initial;  /*Turn off parallax*/
+    max-width: 100%;
+    min-width: 100%;
   }
 
   /* turn off the skip bar motion */
@@ -491,7 +508,7 @@ textarea {
     transform: none;
   }
 
-  .animation-effect {
+  .animation-effect1,animation-effect2,animation-effect3,animation-effect4,#legend {
     animation: none;
   }
 /* 
