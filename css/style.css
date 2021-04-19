@@ -260,6 +260,9 @@ input[type=submit] {
   width: 100%;
 }
 
+form{
+  background-color: white;
+}
 input[type=submit]:hover {
   opacity: 0.8;
 }
@@ -446,6 +449,7 @@ textarea {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  
 }
 .slideshow-container img{
   margin: auto;
@@ -457,6 +461,9 @@ textarea {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.slideshow-container h2, .slideshow-container p{
+  background-color: black;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -471,6 +478,7 @@ textarea {
   margin-top: -22px;
   padding: 16px;
   color: white;
+  background-color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -691,7 +699,7 @@ textarea {
   #con ,.B1984 div, .SilentMajority div,.LittlePrin div,.oldman div,.kiterunner div{
     align-self: center;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.637);
+    /* background-color: rgba(255, 255, 255, 0.637); */
     color:#361e66c2;
     font-weight: bold;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
