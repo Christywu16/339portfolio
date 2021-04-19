@@ -1,11 +1,7 @@
 html{
     scroll-behavior: smooth;
 }
-#finished_description,#toRead_description{
-  text-decoration-color: mediumpurple;
-  
 
-}
 #main, #con_main{
   background-image: url('../images/finish_background.jpg');
   background-repeat: no-repeat;
@@ -13,18 +9,13 @@ html{
 	width:100%;
   height:100%;
   background-size:150% 200%;
-
-  /* Set a specific height */
-  /* min-height: 100px;  */
 }
+
 #con_main h1{
   color:white;
   text-align: center;
-  /* text-transform:uppercase; */
 }
-form{
-  margin:auto;
-}
+
 
 
 /* skip to the content banner */
@@ -44,15 +35,11 @@ form{
   top: 10px;
 }
 
-/* .read_main div{
-  padding: 10px;
-  margin:10px;
-} */
-/* navigation bar */
 nav{
-  background-color: #9400D3;
+  background-color:#361e66e8;
   padding: 25px 0; 
   text-align: center;
+  font-size: 140%;
 }
 
 nav a{
@@ -78,7 +65,7 @@ nav{
 
 .current{
   text-transform: uppercase;
-  background-color:rgb(73, 16, 138);
+  background-color:#2D1759;
   color:rgb(255, 255, 255);
 }
 
@@ -88,10 +75,6 @@ nav{
 
 .container img{
   display: inline;
-  /* display: grid;
-  grid-template-columns: 85%;
-  grid-template-rows: auto;
-  width: 100%; */
 }
 
 
@@ -100,21 +83,14 @@ header {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 35px;
   width:100%;
-  /* color:hsl(266, 45%, 89%); */
   display: inline-block;
-  /* padding: 25px; */
-  
 }
 
 .new_div1, .new_div2, .new_div3, .new_div4{
   background-image: url(https://www.teahub.io/photos/full/353-3535480_harry-potter-john-rylands-library.jpg);
   background-repeat: no-repeat;
-  /* background-size: auto; */
-  /* Set a specific height */
   min-height: 250px; 
   width:100%;
-  /* overflow: hidden; */
-  /* background */
   padding-top: 25px;;
 
   /* Create the parallax scrolling effect */
@@ -132,7 +108,8 @@ header h1, header p{
 
 main{
   font-family:Roboto, system-ui, sans-serif;
-  background-color: hsl(266, 45%, 89%);
+  /* background-color: hsl(266, 45%, 89%); */
+  background-color: black;
   
 }
 #main{
@@ -144,7 +121,7 @@ main{
 footer{
   background-color: black;
   color: white;
-  padding-top: 30px;
+  padding: 10px;
   text-align: center;
 }
 .finished_container, .toRead_container{
@@ -154,11 +131,15 @@ footer{
 .finished_imgs, .toRead_imgs{
   display: grid;
   grid-gap: 50px;
-  grid-template-columns: 85%;
+  /* grid-template-columns: 85%; */
   grid-template-rows: auto;
   width: 100%;
+  padding-bottom: 10px;
 }
 
+.flip-card4,.flip-card5,.flip-card6{
+  display:none;
+}
 
 
 
@@ -179,9 +160,6 @@ footer{
 .animation-effect1,.animation-effect2,.animation-effect3,.animation-effect4,#legend {
   animation: bounceIn 3s;
 }
-/* .animation-effect1,.animation-effect2,.animation-effect3,.animation-effect4{
-  padding-top: 20px;
-} */
 
  
 #f1,#t1,#t2,#t3{
@@ -239,7 +217,7 @@ form {
   /* font-family: inherit; */
   /* text-decoration-thickness: overline; */
   font-weight: bold;
-
+  margin:auto;
 }
 
 #read_main{
@@ -248,10 +226,11 @@ form {
 }
 #finmain{
   background-image: url(../images/6.jpg);
-  background-size:150% 200%;
+  background-size:170% 100%;
+  background-color: #FFFFFF;
 }
 legend{ 
-  /* font-size: 125%; */
+  font-size: 155%;
   /* font-style:italic; */
   text-transform: uppercase;
   text-align: center;
@@ -287,7 +266,7 @@ input[type=submit]:hover {
 
 
 /* finished_html page */
-.Sapiens, .B1984, .SilentMajority{
+.Sapiens, .B1984, .SilentMajority,.LittlePrin,.oldman,.kiterunner{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -295,7 +274,7 @@ input[type=submit]:hover {
   border:floralwhite 2px;
   text-align: center;
 }
-.Sapiens>img, .B1984>img, .SilentMajority>img{
+.Sapiens>img, .B1984>img, .SilentMajority>img,.LittlePrin>img,.oldman>img,.kiterunner>img{
   grid-column: 1/1;
   margin: 10px;
   width: 160px;
@@ -318,18 +297,28 @@ input[type=submit]:hover {
   justify-self: center;
 }
 
-.finished_imgs a, .toRead_imgs a{
+.Moon, .Guns, .Malice{
+  text-align: center;
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.Moon img, .Guns img, .Malice img{
+  margin:auto;
+}
+
+.finished_imgs a, .toRead_imgs a, #main a{
   color: white;
   text-decoration: underline;
 }
 
-#main div{
-  /* margin-top:20px; */
-}
 
 .to3{
   margin-bottom: 20px;
 }
+
+
+
 
 /* style the form in contact page */
 label{
@@ -345,56 +334,258 @@ textarea {
   background-color: #f8f8f8;
   resize: none;
 }
+#read_main{
+  flex-wrap: wrap;
+  align-items: center;
+}
 
 
-.Moon, .Guns, .Malice{
+
+
+/* extra: */
+.inner {
+  margin: auto;
+  color:white;
+  align-self: center;
+  background: rgba(0, 0, 0, 0.514);
+  z-index: 1;
+}
+
+ #con:hover{
+  z-index: -9;
+  overflow: hidden;
+  background: linear-gradient(to right, #fff 20%, #fff 40%, #e98cec85 50%, #8fafeba6 55%, #fff 70%, #fff 100%);
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+/*Begin shimmer code*/
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+
+
+
+/* *** extra */
+
+.profile{
+  z-index: 999;
+}
+
+/* box2 animation */
+/* source: https://blog.csdn.net/llll789789/article/details/96898909 */
+
+@keyframes wiggle {
+  20%  { transform: translateX(5px);  }
+  30%  { transform: translateX(5px);  }
+  40%  { transform: translateX(-4px); }
+  60%  { transform: translateX(4px);  }
+  80%  { transform: translateX(-4px); }
+  100% { transform: translateX(0);    }
+}
+
+
+.content2:hover {
+  animation: wiggle 0.5s ease;
+  animation-iteration-count: 1;
+}
+
+
+/* box3 animation */
+/* source: https://codepen.io/Paul2512C/pen/JxKvpb */
+.quotes .box, .content3 .inner{
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+  padding: 30px;
+}
+
+.content3 .inner::before{
+  opacity: 0.2;
+  background: transparent;
+  pointer-events: none;
+}
+
+.quotes .box::after ,.content3 .inner::after{
+  opacity: 0.2;
+  background: transparent;
+  filter: invert(1);
+  pointer-events: none;
+}
+
+
+.quotes .box:hover, .content3 .inner:hover{
+  color: #f2f2f2;
+  box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+}
+
+.content3 .inner:hover
+{
+  opacity: 1;
+  background: #e2a9e5;
+  background: -moz-linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
+  background: -webkit-linear-gradient(-45deg, #e2a9e5 15%,#2b94e5 100%);
+  background: linear-gradient(135deg, #e2a9e5 15%,#2b94e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
+}
+
+
+
+
+.slideshow-container {
+  box-sizing:border-box;
+  padding: 50px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container img{
+  margin: auto;
+  width:220px;
+  height:350px;
+}
+.fade{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.fade{
   text-align: center;
-  padding:15px;
 }
-#read_main p{
-  display:none;
+.prev{
+  position:absolute;
+  left:0px;
 }
 
-/* tablet view */
-/* @media (max-width: 500px) {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
-  nav {
-    height:100%;
-   }
-  
-} */
+/* Caption text */
+.fade {
+  color: #f2f2f2;
+  font-size: 15px;
+  /* padding: 8px 12px; */
+  /* position: absolute; */
+  bottom: 8px;
+  /* width: 100%; */
+  text-align: center;
+}
 
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 12px;
+  /* position: absolute; */
+  top: 0;
+}
 
-/* laptop view */
-@media screen and (min-width: 600px) {
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dots{
+  text-align: center;
+}
 
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+  /* tablet view */
+@media screen and (min-width: 420px) {
   #read_main p{
     display:contents;
+  }
+  .flip-card4,.flip-card5,.flip-card6{
+    display:unset;
   }
   
   /* change the navigation bar display as horizontally */
   nav li {
     border-bottom: none;
-    /* display: inline-block;   This need to be fix!!!! Look hw5 for nav */
-    /* float: right; */ 
     display:inline;
     padding-right:20px;
     text-align: right;
     align-items:center; 
-    /* text-align: right;
-    align-items: center; */
   }
   nav{
     display:flex;
-    /* align-items: flex-end; */
     justify-content:flex-end;
+    font-size: 100%;
   }
   .new_div1, .new_div2, .new_div3, .new_div4{
     min-height: 150px;
   }
+}
+
+
+/* laptop view */
+@media screen and (min-width: 600px) {
 
   /* flip card !!! let's do this */
-
   /* The flip card container */
   .flip-card1,.flip-card2,.flip-card3,.flip-card4,.flip-card5,.flip-card6,.flip-card7,.flip-card8,.flip-card9{
     background-color: transparent;
@@ -442,7 +633,7 @@ textarea {
 
   /* Style the back side */
   .flip-card-back1, .flip-card-back2 ,.flip-card-back3,.flip-card-back4,.flip-card-back5,.flip-card-back6,.flip-card-back7,.flip-card-back8,.flip-card-back9{
-    background-color:mediumpurple;
+    background-color:#2D1759;
     color: white;
     /* transform: rotateY(180deg); */
     transform: rotateY(180deg) translateZ(1px); 
@@ -450,30 +641,64 @@ textarea {
   }
 
   .finished_container h2, .toRead_container h2{
-    margin-top: 60px;
+    margin-top: 80px;
   }
 
-
+  .finished_imgs, .toRead_imgs{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+ 
 
 
   /* display by grid */
-  .Sapiens, .B1984, .SilentMajority{
+  .Sapiens, .B1984, .SilentMajority,.LittlePrin,.oldman,.kiterunner{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
-  }
-  .finished_imgs, .toRead_imgs{
-    display: grid; 
-    
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .finished_imgs{
-    grid-template-rows: 1fr 1fr;
-  }
-  .toRead_imgs{
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
   }
   
+
+  .Sapiens img,.SilentMajority img,.oldman img{
+    grid-column: 1/span 2;
+    grid-row:1/1;
+    width: 320px;
+    height:500px;
+  }
+
+  .B1984 img,.LittlePrin img,.kiterunner img{
+    grid-column: 3/span 2;
+    grid-row:1/1;
+    width: 320px;
+    height:500px;
+  }
+
+  .Sapiens div, .SilentMajority div,.oldman div{
+    grid-column: 2/ span 3;
+    grid-row:1/1;
+    padding: 15px;
+  }
+
+  .B1984 div,.LittlePrin div,.kiterunner div{
+    grid-column: 1/ span 3;
+    grid-row:1/1;
+    padding: 15px;
+  }
+  #con ,.B1984 div, .SilentMajority div,.LittlePrin div,.oldman div,.kiterunner div{
+    align-self: center;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.637);
+    color:#361e66c2;
+    font-weight: bold;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  }
+
+
+
   #f1,#f2,#f3{
     grid-row: 1/1;
     object-fit: cover;
@@ -487,8 +712,88 @@ textarea {
     align-items: center;
   }
 
+  #read_main{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height:700px;
+  }
+  
+  
+  
+  
+  #read_main .content{
+    position: relative;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-300px);
+    
+    padding-block-end:50px;
+  }
+  
+  #read_main .content{
+    /* transform: translateY(-100px); */
+  }
+  
+  #read_main .content{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #read_main .content{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none; 
+    background: black;
+    color: #fff;
+    border: 1px solid #333;
+  }
+ 
 
 
+
+  .Moon, .Guns, .Malice{
+    text-align: center;
+    display:flex;
+    flex-wrap:wrap;
+    position: relative;
+  }
+  .Moon, .Guns, .Malice{
+    position: relative;
+    cursor: pointer;
+    max-width: 230px;
+    max-height: 410px;
+    transition: 0.5s;
+  }
+
+  .Moon img, .Guns img, .Malice img{
+    position: relative;
+    min-height:410px; 
+    min-width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    transform: translateY(50px);
+  }
+
+  .Moon img:hover, .Guns img:hover, .Malice img:hover{
+    transform: translateY(0);
+    opacity: 0.1;
+    /* transform: scaleY(0.2) scaleX(0.2); */
+  }
+
+
+  .Moon img, .Guns img, .Malice img{
+    transition: 0.5s;
+  }
 }
 
 
@@ -524,10 +829,10 @@ textarea {
   .animation-effect1,animation-effect2,animation-effect3,animation-effect4,#legend {
     animation: none;
   }
-/* 
-  .flip-card:active(:focus-within){
-
-  } */
+  
 }
+
+
+
 
 
